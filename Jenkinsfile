@@ -9,6 +9,8 @@ node {
     }
     stage('Test Image') {
         app.inside {
+        sh "Test Passed"
+
         }
     }
     stage('Push Image') {
