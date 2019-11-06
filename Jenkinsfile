@@ -1,5 +1,5 @@
 node {
-    def app
+    def app()
     stage('clone repository') {
         git 'https://github.com/vinay5557/web.git'
     }
