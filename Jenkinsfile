@@ -1,7 +1,7 @@
 node {
-    def app()
+    def app
     stage('clone repository') {
-        git 'https://github.com/vinay5557/web.git'
+        git url:'https://github.com/vinay5557/web.git'
     }
     docker.build('vinay555/web1').inside("--volume=/var/run/docker.sock:/var/run/docker.sock") {  
    // The build here
