@@ -9,6 +9,7 @@ node {
     }
     stage('Test Image') {
         app.inside {
+            echo 'Test passed'
 
         }
     }
