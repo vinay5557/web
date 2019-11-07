@@ -9,12 +9,7 @@ node {
     stage('Build Image') {
         sh 'docker build -t vinay555/web1 .'
     }
-    stage('Test Image') {
-        app.inside {
-            echo 'Test passed'
-
-        }
-    }
+    
     stage('Push Image') {
                 sh 'docker build -t vinay555/web1'
     }
