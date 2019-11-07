@@ -7,8 +7,7 @@ node {
    // The build here
 }
     stage('Build Image') {
-        app=docker.build("vinay555/web1:${env.BUILD_NUMBER}")
-        
+        sh 'docker build -t vinay555/web1'
     }
     stage('Test Image') {
         app.inside {
@@ -17,8 +16,6 @@ node {
         }
     }
     stage('Push Image') {
-        docker.withRegistry('https://registry.hub.docker.com','dockerhub')
-        app.push("${env.BUILD_NUMBER}")
+                sh 'docker build -t vinay555/web1'
     }
-    
 }
