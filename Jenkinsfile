@@ -16,6 +16,6 @@ node {
         }
     }
     stage('Push Image') {
-                sh 'docker build -t vinay555/web1'
+                sh 'docker build -t vinay555/web1 .'
     }
 }
