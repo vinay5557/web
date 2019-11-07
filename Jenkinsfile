@@ -7,7 +7,7 @@ node {
    // The build here
 }
     stage('Build Image') {
-        sh 'docker build -t vinay555/web1'
+        sh 'docker build -t vinay555/web1 .'
     }
     stage('Test Image') {
         app.inside {
@@ -16,6 +16,6 @@ node {
         }
     }
     stage('Push Image') {
-                sh 'docker build -t vinay555/web1 .'
+                sh 'docker build -t vinay555/web1'
     }
 }
