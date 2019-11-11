@@ -3,9 +3,7 @@ node {
     stage('clone repository') {
         git url:'https://github.com/vinay5557/web.git'
     }
-    docker.build('vinay555/web1').inside("--volume=/var/run/docker.sock:/var/run/docker.sock") {  
-   // The build here
-}
+    
     stage('Build Image') {
         sh 'docker build -t vinay555/web1 .'
     }
